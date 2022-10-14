@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div id="inner_banner" class="section inner_banner_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <div class="title-holder">
+                            <div class="title-holder-cell text-left">
+                                <h1 class="page-title">O'quv adabiyotlar</h1>
+                                <ol class="breadcrumb">
+                                    <li><a href="{% url 'index' %}">Bosh sahifa</a></li>
+                                    <li class="active">O'quv adabiyotlar</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end inner page banner -->
+    <!-- section -->
+    <div class="section padding_layout_1 service_list">
+        <div class="container">
+            <div class="row">
+
+                {% if materials %}
+                    {% for material in materials %}
+                        <div class="col-md-4 service_blog margin_bottom_50">
+                            <div class="full">
+                                <div class="service_img"><img class="img-responsive" src="{{ material.image.url }}"
+                                                              alt="{{ material.title }}"/></div>
+                                <div class="service_cont">
+                                    <h3 class="service_head">{{ material.title }}</h3>
+                                    <p>{{ material.description }}</p>
+                                    <div class="bt_cont"><a class="btn sqaure_bt" href="{% url 'edumat-detail' material.id %}">Batafsil</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                {% else %}
+                    <h4>Malumotlar bazasida o'quv adabiyotlar mavjud emas</h4>
+                {% endif %}
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end section -->
+
+{% endblock %}
+
+
+
+
+

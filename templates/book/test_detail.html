@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- inner page banner -->
+    <div id="inner_banner" class="section inner_banner_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <div class="title-holder">
+                            <div class="title-holder-cell text-left">
+                                <h2>{{ test.description }}</h2>
+                                <ol class="breadcrumb">
+                                    <li><a href="{% url 'test-list' %}">TESTLAR</a></li>
+                                    <li>{{ test.title }}</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end inner page banner -->
+    <!-- section -->
+    <div class="section padding_layout_1 blog_grid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right">
+                    <div>
+                        {{ test.content | safe }}
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
+                    <div class="side_bar">
+
+                        <div class="side_bar_blog">
+                            <h4>{{ topic.get_category_display }}</h4>
+                            <div class="categary">
+                                <ul>
+                                    {% for category_topic in category_topics %}
+                                        <li><a href="{{ category_topic.get_absolute_url }}"><i
+                                                class="fa fa-caret-right"></i> {{ category_topic.title }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end section -->
+
+
+{% endblock %}
+
+
+
+
+

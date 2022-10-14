@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div id="inner_banner" class="section inner_banner_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <div class="title-holder">
+                            <div class="title-holder-cell text-left">
+                                <h1 class="page-title">Videodarslar</h1>
+                                <ol class="breadcrumb">
+                                    <li><a href="{% url 'index' %}">Bosh sahifa</a></li>
+                                    <li class="active">Videodarslar</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end inner page banner -->
+    <!-- section -->
+    <div class="section padding_layout_1 service_list">
+        <div class="container">
+            <div class="row">
+
+                {% if videos %}
+                    {% for video in videos %}
+                        <div class="col-md-4 service_blog margin_bottom_50">
+                            <div class="full">
+                                <div class="service_img"><img class="img-responsive" src="{{ video.image.url }}"
+                                                              alt="{{ video.title }}"/></div>
+                                <div class="service_cont">
+                                    <h3 class="service_head">{{ video.title }}</h3>
+                                    <p>{{ video.description }}</p>
+                                    <div class="bt_cont"><a class="btn sqaure_bt" href="{% url 'video-detail' video.id %}">Batafsil</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                {% else %}
+                    <h4>Malumotlar bazasida videodarslar mavjud emas</h4>
+                {% endif %}
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end section -->
+
+{% endblock %}
+
+
+
+
+
