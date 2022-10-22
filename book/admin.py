@@ -14,6 +14,8 @@ class TopicAdminForm(forms.ModelForm):
 
 class TopicAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
+    list_display = ('id', 'category', 'title', 'position')
+    list_editable = ('position', )
     form = TopicAdminForm
 
 

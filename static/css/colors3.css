@@ -276,8 +276,12 @@ a.btn.main_bt, button.btn.main_bt {
 }
 
 h2 {
-    font-size: 45px;
+    font-size: 25px;
     text-transform: none;
+
+}
+.title-holder-cell h2{
+    color: #fff;
 }
 
 .product_list:hover, .product_list:focus {

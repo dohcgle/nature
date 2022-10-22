@@ -19,6 +19,7 @@ class Topic(models.Model):
     title = models.CharField(verbose_name="Mavzu", max_length=512)
     content = RichTextField()
     slug = models.SlugField(max_length=200, blank=True, null=True)
+    position = models.IntegerField(verbose_name='Tartib raqami', default=1)
     created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, blank=True, null=True)
     is_published = models.BooleanField(default=True)
@@ -26,6 +27,7 @@ class Topic(models.Model):
     class Meta:
         verbose_name = "Mavzu"
         verbose_name_plural = 'Mavzular'
+        ordering = ('position', )
 
     def __str__(self):
         return self.title

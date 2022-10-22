@@ -1,46 +1,83 @@
-<footer class="footer_style_2">
-    <div class="container-fuild">
-        <div class="row">
-            <div class="map_section">
-                <div id="map"></div>
-            </div>
-            <div class="footer_blog">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="main-heading left_text">
-                            <h2>Informatika va axborot texnologiyalari</h2>
-                        </div>
-                        <p>"ELEKTRON TА'LIM MUXITIDА WEB TEXNOLOGIYALАRDАN FOYDАLАNISH METODIKАSINI TАKOMILLАSHTIRISH" dissertatsiyasi doirasida tayyorlangan</p>
-                        <ul class="social_icons">
-                            <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            </li>
-                            <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            </li>
-                            <li class="social-icon gp"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="main-heading left_text">
-                            <h2>Havolalar</h2>
-                        </div>
-                        <ul class="footer-menu">
-                            <li><a href="{% url 'index' %}"><i class="fa fa-angle-right"></i> Bosh sahifa</a></li>
-                            <li><a href="{% url 'index' %}"><i class="fa fa-angle-right"></i> Mavzular </a>
-                            </li>
-                            <li><a href="{% url 'topic-list' %}"><i class="fa fa-angle-right"></i> O'quv adabiyotlar</a>
-                            </li>
-                            <li><a href="{% url 'video-list' %}"><i class="fa fa-angle-right"></i> Videodarslar</a></li>
-                            <li><a href="{% url 'slide-list' %}"><i class="fa fa-angle-right"></i> Taqdimotlar</a></li>
-                            <li><a href="{% url 'test-list' %}"><i class="fa fa-angle-right"></i> Testlar</a></li>
-                        </ul>
-                    </div>
 
-                </div>
+{% load static %}
+
+  <!-- Footer -->
+  <footer id="footer" class="footer bg-img-center-bottom bg-img-cover" data-tm-bg-img="{% static 'home/images/bg/bg3.jpg' %} ">
+    <div class="footer-widget-area pt-120">
+      <div class="container pb-40">
+        <div class="row">
+          <div class="col-md-12 col-lg-4">
+            <div class="tm-widget-contact-info contact-info-style1" data-tm-margin-top="-22">
+              <div class="thumb" data-tm-margin-bottom="48">
+{#                <img alt="Logo" width="200" src="{% static 'home/images/logo-wide-white.png' %} ">#}
+              </div>
+              <ul class="mb-30">
+                <li class="contact-phone">
+                  <div class="icon"><img src="{% static 'home/images/icons/c1.png' %} " alt="Icon"></div>
+                  <div class="text">
+                    <a href="tel:+510-455-6735">+998 (90) 000-00-00</a>
+                    <span>Telefon</span>
+                  </div>
+                </li>
+                <li class="contact-email">
+                  <div class="icon"><img src="{% static 'home/images/icons/c2.png' %} " alt="Icon"></div>
+                  <div class="text">
+                    <a href="mailto:info@yourdomain.com">info@tabiat.com</a>
+                    <span>Email</span>
+                  </div>
+                </li>
+                <li class="contact-address border-0">
+                  <div class="icon"><img src="{% static 'home/images/icons/c3.png' %} " alt="Icon"></div>
+                  <div class="text"><span class="font-size-15 text-white">Toshkent sh Yunusobod tuman</span><span>Manzil</span></div>
+                </li>
+              </ul>
             </div>
-            <div class="cprt">
-                <p>Informatika 8 © Guli Taylakova</p>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="widget widget_nav_menu ml-25">
+              <h4 class="widget-title">Havolalar</h4>
+              <div class="menu-footer-page-list">
+                <ul id="footer-page-list" class="menu">
+                  <li><a href="{% url 'topic-list' %}">Mavzular</a></li>
+                  <li><a href="{% url 'video-list' %}">Video darslar</a></li>
+                  <li><a  href="{% url 'slide-list' %}">Metodik qollanma</a></li>
+                  <li><a href="{% url 'test-list' %}">Testlar</a></li>
+                </ul>
+              </div>
             </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="widget widget_nav_menu ml-25">
+              <h4 class="widget-title">O'quv qo'llanmalar</h4>
+              <div class="menu-footer-page-list">
+                <ul id="footer-page-list" class="menu">
+                  <li><a target="_blank" href="{% static 'images/qollanma.pdf' %}">Tabiat bilan tanishtirish</a></li>
+                  <li><a  href="{% url 'slide-list' %}">Tajriba va eksperementlar</a></li>
+                  <li><a target="_blank" href="{% static 'images/ruxsatnoma.pdf' %}">Nashr uchun ruxsatnoma</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="footer-bottom-style1">
+                <div class="footer-paragraph font-size-15">© Yashil tabiat. Barcha huquqlar himoyalangan</div>
+                <div class="widget widget-social-list-custom clearfix mb-0">
+                  <ul class="styled-icons icon-theme-colored1">
+                    <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</footer>
+  </footer>

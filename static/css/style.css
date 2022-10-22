@@ -1,43 +1,3 @@
-/*------------------------------------------------------------------
-		File Name: style.css
--------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------
-		[Table of contents]
-
-		1.  IMPORT FONTS
-    2.  IMPORT FILES
-	3.  BASIC
-    4.  LOADER
-	5.  HEADER
-	      - Header Top 
-	      - Menu 
-	      - Search Bar
-	      - Side Menu
-		  - Fix Header
-	6.  SLIDER PARALLAX
-	      - Simple Parallax
-	      - Slider Text
-		  - Testimonial slider
-	7.  SECTION
-	      - Counter
-		  - Form
-		  - Progress Bar
-		  - Pagination
-	8.  SLIDER
-	9.  ACCORDION
-	10. PRICE TABLE
-	11. INNER PAGE BANNER
-	12. SIDEBAR
-	     - Sidebar Search
-	13. BLOG	
-         - Blog Detail	
-	14. CASE STUDIES
-	15. SHOP
-    16. FOOTER
-	17. CUSTOM
-		
-	-------------------------------------------------------------------*/
 
 
 /*------------------------------------------------------------------
@@ -53,9 +13,7 @@
 /*------------------------------------------------------------------
 		2. IMPORT FILES
 	-------------------------------------------------------------------*/
-
-@import url(animate.css);
-@import url(font-awesome.min.css);
+ /*@import url(font-awesome.min.css);*/
 
 /*------------------------------------------------------------------
 		3. BASIC
@@ -82,9 +40,7 @@ body {
 	overflow-x: hidden;
 }
 
-body.demos .section {
-	background: url(images/bg.png) repeat top center #f2f3f5;
-}
+
 
 body.demos .section-title img {
 	max-width: 280px;
@@ -230,7 +186,6 @@ button.btn {
 	text-transform: uppercase;
 	margin-top: 10px;
 	color: #fff;
-	border: solid transform 1px;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
 	position: relative;
 	font-family: 'Poppins', sans-serif;
@@ -506,11 +461,11 @@ a:focus {
 	width: 100%;
 	float: left;
 	margin: 0;
-	padding: 0;
 	transition: 0.5s all;
 	box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 	border-radius: 5px;
 	overflow: hidden;
+	padding: 30px  30px;
 }
 .full:hover {
 	box-shadow: rgb(149 157 165 / 30%) 0px 8px 24px;
@@ -1460,7 +1415,6 @@ div#pallax_slider {
 }
 
 .dott_star {
-	background-image: url('../images/star_dots.png');
 	width: 100%;
 	background-position: center center;
 	height: 100%;
@@ -1473,7 +1427,6 @@ div#pallax_slider {
 }
 
 .clouds {
-	background-image: url('../images/claud.png');
 	width: 100%;
 	background-position: center center;
 	height: 100%;
@@ -1515,7 +1468,6 @@ div#pallax_slider {
 }
 
 .blue_layer_bottom {
-	background-image: url('../images/blue_layer_bottom.png');
 	height: 132px;
 	width: 100%;
 	background-position: center bottom;
@@ -1530,7 +1482,6 @@ div#pallax_slider {
 }
 
 body.light_blue #full_slider.full_slider_inner {
-	background: url('../images/star_bg2.png');
 	background-size: cover;
 }
 
@@ -1608,7 +1559,6 @@ body.light_blue #full_slider.full_slider_inner {
 section.quality_ser_bg {
 	background-repeat: repeat-x !important;
 	background-position: bottom center !important;
-	background: url(../images/bg_patter_1.png);
 }
 
 .about_info {
@@ -1630,7 +1580,6 @@ section.quality_ser_bg {
 section.dottad_star_bg {
 	background-repeat: no-repeat !important;
 	background-position: bottom right !important;
-	background-image: url('../images/gray_dotts.png');
 }
 
 #subscribe_form input {
@@ -1652,7 +1601,6 @@ section.dottad_star_bg {
 
 .grow_business {
 	background-position: right bottom !important;
-	background: url(../images/bg_patter_2.png);
 	background-repeat: no-repeat;
 }
 
@@ -2034,9 +1982,6 @@ section.dottad_star_bg {
 	margin-left: 0;
 }
 
-.stars_dottat {
-	background: url('../images/star_dots.png');
-}
 
 .only_parallax {
 	background-attachment: fixed;
@@ -2650,21 +2595,13 @@ span.skill {
 	border: none;
 }
 
-.mechanic .price_table_active .price_head {
-	background: url('../images/mechanic_service/slide4.jpg');
-	background-size: cover;
-}
 
 
 /*------------------------------------------------------------------
 		11. INNER PAGE BANNER
 	-------------------------------------------------------------------*/
 
-#default_theme .banner_slider {
-	min-height: 270px;
-	background-image: url('../images/inner_banner_bg.png');
-	background-position: center center;
-}
+
 
 .banner_slider .vertical-center {
 	min-height: 270px;
@@ -3220,12 +3157,6 @@ span.skill {
 	padding-bottom: 185px;
 }
 
-.cleaning .testmonial_section {
-	background-image: url('../images/cleaning_service/test_bg.png');
-	background-size: cover;
-	padding-bottom: 185px;
-}
-
 
 /*------------------------------------------------------------------
 		16. FOOTER
@@ -3488,7 +3419,6 @@ footer ul.social_icons {
 
 .gross_layout::after {
 	position: absolute;
-	background: url(../images/it_service/dark_bg_img.png);
 	width: 35%;
 	height: 100%;
 	right: 0;
@@ -3513,7 +3443,6 @@ footer ul.social_icons {
 
 .gross_layout.right_gross_layout::after {
 	position: absolute;
-	background: url(../images/it_service/dark_bg_img2.png);
 	width: 35%;
 	height: 100%;
 	left: 0;
@@ -3621,14 +3550,13 @@ footer ul.social_icons {
 }
 
 .inner_banner_section {
-	background: url('../images/it_service/inner_page_banner.jpg');
 	min-height: 245px;
 	background-size: cover;
-	background-position: center center;
+
+	background-position: top center;
 }
 
 .cleaning .inner_banner_section {
-	background: url('../images/cleaning_service/inner_page_banner.jpg');
 	min-height: 245px;
 	background-size: cover;
 	background-position: top center;
@@ -3789,8 +3717,12 @@ footer ul.social_icons {
 .service_cont {
 	padding: 15px;
 }
+.service_cont p{
+	text-align: justify;
+}
 .service_head{
 	font-size: 18px;
+	text-align: justify;
 }
 .bt_cont a{
 	width: 100%;

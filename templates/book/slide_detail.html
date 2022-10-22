@@ -3,11 +3,11 @@
 
 {% block content %}
     <!-- inner page banner -->
-    <div id="inner_banner" class="section inner_banner_section">
+    <div id="inner_banner" style="background: url({% static 'images/it_service/inner_page_banner.jpg' %})"  class="section inner_banner_section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="full">
+                    <div class=" ">
                         <div class="title-holder">
                             <div class="title-holder-cell text-left">
                                 <h2>{{ slide.description }}</h2>
@@ -27,7 +27,7 @@
     <div class="section padding_layout_1 blog_grid">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right">
+                <div class="col-lg-10 col-md-10 m-auto col-sm-12 col-xs-12 pull-right">
                     <div>
                         {{ slide.content | safe }}
                     </div>

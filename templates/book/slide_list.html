@@ -2,17 +2,17 @@
 {% load static %}
 
 {% block content %}
-    <div id="inner_banner" class="section inner_banner_section">
+    <div id="inner_banner" style="background: url({% static 'images/it_service/inner_page_banner.jpg' %})"  class="section inner_banner_section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="full">
+                    <div class=" ">
                         <div class="title-holder">
                             <div class="title-holder-cell text-left">
-                                <h1 class="page-title">Taqdimotlar</h1>
+                                <h1 class="page-title">Metodik qo'llanmalar</h1>
                                 <ol class="breadcrumb">
                                     <li><a href="{% url 'index' %}">Bosh sahifa</a></li>
-                                    <li class="active">Taqdimot</li>
+                                    <li class="active">Metodik qo'llanmalar</li>
                                 </ol>
                             </div>
                         </div>
@@ -30,14 +30,16 @@
                 {% if slides %}
                     {% for slide in slides %}
                         <div class="col-md-4 service_blog margin_bottom_50">
-                            <div class="full">
-                                <div class="service_img"><img class="img-responsive" src="{{ slide.image.url }}"
-                                                              alt="{{ slide.title }}"/></div>
-                                <div class="service_cont">
-                                    <h3 class="service_head">{{ slide.title }}</h3>
-                                    <p>{{ slide.description }}</p>
-                                    <div class="bt_cont"><a class="btn sqaure_bt" href="{% url 'slide-detail' slide.id %}">Batafsil</a>
-                                    </div>
+                            <div class="full p-0">
+                                <div class=" ">
+                                    <a class="" href="{% url 'slide-detail' slide.id %}">
+                                        <div class="service_img"><img class="img-responsive" src="{{ slide.image.url }}"
+                                                                      alt="{{ slide.title }}"/></div>
+                                        <div class="text-center">
+                                            <p class="service_head text-primary text-black-50 border-bottom display-inline-block pt-3">{{ slide.title }}</p>
+                                        </div>
+
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -49,8 +51,8 @@
                 {% endif %}
 
 
-            </div>
         </div>
+    </div>
     </div>
     <!-- end section -->
 

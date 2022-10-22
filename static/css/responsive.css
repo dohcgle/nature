@@ -253,11 +253,13 @@
 		font-weight: 600;
 		width: 40px;
 		height: 40px;
-		border: solid #000 2px;
+		border: solid #353535 2px;
 		border-radius: 5px;
 		position: absolute;
 		top: -67px;
 		left: 20px;
+
+		margin-top: 10px;
 	}
 	#navbar_menu.small-screen #menu-button::after {
 		position: absolute;
